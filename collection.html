@@ -1,0 +1,652 @@
+<!-- watches collection page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Collection</title>
+  <link rel="shortcut icon" href="./images/logos/kings.png" type="image/x-icon">
+  <script src="./app.js"></script>
+  <style>
+            * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    body{
+        background-color: #050505;
+        scroll-behavior: smooth;
+    }
+    .hero {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    height: 10%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .company-head {
+        display: flex;
+        align-items: center;
+        color: rgb(255, 0, 0);
+        font-size: 170%;
+    }
+
+    .company-head h1 {
+        margin-left: 10px;
+    }
+
+    .company-head img {
+        height: 60px;
+        width: 90px;
+    }
+
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        padding-right: 5%;
+    }
+
+    li {
+        margin: 0 10px;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    a.active,
+    a:hover{
+        color: rgb(255, 0, 0);
+        font-size: 104%;
+    }
+
+/* Existing styles remain unchanged */
+
+/* Responsive styles for phones and tablets */
+/* responsive css  */
+/* Responsive styles for phones and tablets */
+.navbar-toggle {
+  display: none;
+}
+.navbar-toggle img{
+  width: 20px;
+  height: 2%;
+}
+@media screen and (max-width: 915px) {
+  .company-head h1 {
+    margin-left: 5px;
+    font-size: 27px;
+}
+
+.company-head img {
+    height: 40px;
+    width: 70px;
+}
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.935);
+  }
+
+  .navbar-links {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .navbar-links li {
+    margin: 10px;
+  }
+
+  .navbar-links li a {
+    font-size: 10px;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+  .container{
+        display: grid;
+        flex-wrap: wrap;
+        margin-top: 1%;
+        align-items: center;
+        justify-content: center;
+   
+    }
+    .head-c h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 0, 0);
+        font-size: 20px;
+    }
+    .collection-box {
+      width: 130px;
+      padding: 10px;
+      margin: 15px;
+      background-color: #f1f1f1;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      /* flex-wrap: wrap; */
+    }
+
+    .collection-box:hover {
+      transform: translateY(-4px);
+    }
+
+    .collection-box img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 5%;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .collection-box h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .collection-box p {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #777;
+    }
+
+    .collection-box button {
+      padding: 10px 20px;
+      background-color: #ffa500;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+}
+@media screen and (max-width: 550px) {
+  .company-head h1 {
+    margin-left: 5px;
+    font-size: 22px;
+}
+
+.company-head img {
+    height: 30px;
+    width: 50px;
+}
+  .navbar-toggle {
+    display: flex;
+    border: 1px solid #ff0000;
+    padding: 3px;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    margin: 3px;
+  }
+
+  .navbar-links li a {
+    font-size: 10px;
+    padding: .4rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .container{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1%;
+        align-items: center;
+        justify-content: center;
+    }
+    .head-c h1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 0, 0);
+        font-size: 17px;
+    }
+    .collection-box {
+      width: 100px;
+      /* height: 300px; */
+      padding: 5px;
+      margin: 10px;
+      background-color: #f1f1f1;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .collection-box:hover {
+      transform: translateY(-3px);
+    }
+
+    .collection-box img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 5%;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .collection-box h3 {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
+    .collection-box p {
+      font-size: 12px;
+      margin-bottom: 15px;
+      color: #777;
+    }
+
+    .collection-box button {
+      padding: 8px 18px;
+      background-color: #ffa500;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .filter-options {
+        /* border: 2px solid greenyellow; */
+      text-align: center;
+      /* margin-bottom: 1%; */
+      margin-top: 1%;
+      font-size: 10px;
+    }
+
+    .filter-options label {
+      margin-right: 10px;
+      /* margin-top: 0%; */
+      color: #ff0000;
+      /* font-size: 5px; */
+      /* border: 2px solid greenyellow; */
+
+}
+
+.empty{
+        height: 2%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: cover;
+    }
+    .empty .section img{
+        height: 130px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: cover; 
+    }
+
+
+}
+.navbar-links.active {
+  display: flex;
+  margin-top: -1px;
+    background-color: rgba(0, 0, 0, 0.935);
+}
+
+
+    .empty{
+        height: 2%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: cover;
+    }
+    .empty img{
+        height: 200px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: cover; 
+    }
+    .head-c{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: red;
+        font-size: 18px;
+    }
+    .filter-options {
+        /* border: 2px solid greenyellow; */
+      text-align: center;
+      /* margin-bottom: 1%; */
+      margin-top: 1%;
+    }
+
+    .filter-options label {
+      margin-right: 10px;
+      /* margin-top: 0%; */
+      color: #ff0000;
+      font-size: 115%;
+    } 
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1%;
+        align-items: center;
+        justify-content: center;
+    }
+    .collection-box {
+      width: 280px;
+      padding: 20px;
+      margin: 20px;
+      background-color: #f1f1f1;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .collection-box:hover {
+      transform: translateY(-4px);
+    }
+
+    .collection-box img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5%;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .collection-box h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .collection-box p {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #777;
+    }
+
+    .collection-box button {
+      padding: 10px 20px;
+      background-color: #ffa500;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .collection-box button:hover {
+      background-color: #ff0000;
+    }
+    .footer-copyright {
+            font-size: 12px;
+            color: #f3e9e9;
+            padding-bottom: 15px;
+            /* margin-top: 20px; */
+            }
+ /* footer  */
+  </style>
+</head>
+<body>
+    <div class="hero">
+      <nav>
+        <div class="company-head">
+          <!-- logo -->
+          <div class="company-logo"><img src="./images/logos/kings.png" alt=""></div>
+          <!-- company name company head -->
+          <h1>CROWN-WATCHES LTD</h1>
+        </div>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+          <img src="./images/logos/menu.png" alt="menu-Logo">
+        </div>
+        <!-- navigations -->
+        <ul class="navbar-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about-us.html">ABOUT-US</a></li>
+          <li><a href="collection.html" class="active">COLLECTIONS</a></li>
+          <li><a href="reviews.html">REVIEWS</a></li>
+          <li><a href="contact-us.html">CONTACTS</a></li>
+        </ul>
+        <!-- navigation end -->
+      </nav>
+    </div>
+    <div class="empty">
+        <div class="section">
+            <img src="./images/space-img.jpg" alt="">
+        </div>
+    </div>
+  <div class="filter-options">
+    <label for="men-watch">Men's Watches</label>
+    <input type="radio" name="watch-type" id="men-watch" checked>
+    <label for="women-watch">Women's Watches</label>
+    <input type="radio" name="watch-type" id="women-watch">
+  </div>
+  <div class="head-c"><h1>COLLECTION PHASE 1</h1></div>
+  <div class="container">
+    <div class="collection-box">
+      <img src="./images/1 (6).jpg" alt="Rolex">
+      <h3>Rolex</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p>Price: $2200.00</p>
+      <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+      <img src="./images/image-b.jpg" alt="Omega">
+      <h3>Omega</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p>Price: $1500.00</p>
+      <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+        <img src="./images/ww-w.jpg" alt="Rolex">
+        <h3>Tag Heuer</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Price: $2200.00</p>
+        <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+        <img src="./images/w1.jpg" alt="Omega">
+        <h3>Breitling</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Price: $1500.00</p>
+        <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+        <img src="./images/w2.jpg" alt="Rolex">
+        <h3>Longines</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Price: $2200.00</p>
+        <button>Buy Now!</button>
+    </div>
+
+
+  </div>
+  <!-- row2  -->
+  <div class="head-c"><h1>COLLECTION PHASE 2</h1></div>
+  <div class="container">
+    <div class="collection-box">
+      <img src="./images/w3.jpg" alt="Rolex">
+      <h3>Movado</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p>Price: $2200.00</p>
+      <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+      <img src="./images/w4.jpg" alt="Omega">
+      <h3>Cartier</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p>Price: $1500.00</p>
+      <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+        <img src="./images/w5.jpg" alt="Rolex">
+        <h3>Jaeger-LeCoultre</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Price: $2200.00</p>
+        <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+        <img src="./images/w3.jpg" alt="Omega">
+        <h3>Tudor</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Price: $1500.00</p>
+        <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+        <img src="./images/image-l1.jpg" alt="Rolex">
+        <h3>IWC Schaffhausen</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Price: $2200.00</p>
+        <button>Buy Now!</button>
+    </div>
+
+  </div>
+
+  <!-- row 3  -->
+  <div class="head-c"><h1>COLLECTION PHASE 3</h1></div>
+  <div class="container">
+    <div class="collection-box">
+      <img src="./images/img-1.jpg" alt="Rolex">
+      <h3>Seiko</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p>Price: $2200.00</p>
+      <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+      <img src="./images/mordern-watch.jpg" alt="Omega">
+      <h3>Citizen</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p>Price: $1500.00</p>
+      <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+        <img src="./images/1 (6).jpg" alt="Rolex">
+        <h3>Casio</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Price: $2200.00</p>
+        <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+        <img src="./images/t-m.jpg" alt="Omega">
+        <h3>Timex</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Price: $1500.00</p>
+        <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+        <img src="./images/image-l1.jpg" alt="Rolex">
+        <h3>Fossil</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Price: $2200.00</p>
+        <button>Buy Now!</button>
+    </div>
+
+  </div>
+
+  <!-- row 4  -->
+  <div class="head-c"><h1>COLLECTION PHASE 4</h1></div>
+  <div class="container">
+    <div class="collection-box">
+      <img src="./images/351781.jpg" alt="Rolex">
+      <h3>Tissot</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p>Price: $2200.00</p>
+      <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+      <img src="./images/img.jpg" alt="Omega">
+      <h3>Bulova</h3>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+      <p>Price: $1500.00</p>
+      <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+        <img src="./images/w1.jpg" alt="Rolex">
+        <h3>Patek Philippe</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Price: $2200.00</p>
+        <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+        <img src="./images/w3.jpg" alt="Omega">
+        <h3>Audemars Piguet</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Price: $1500.00</p>
+        <button>Buy Now!</button>
+    </div>
+    <div class="collection-box">
+        <img src="./images/ww-w.jpg" alt="Rolex">
+        <h3>Swatch</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <p>Price: $2200.00</p>
+        <button>Buy Now!</button>
+    </div>
+
+
+  </div>
+
+  <!-- end of rows  -->
+
+  <!-- <div class="end-page">
+    
+  </div> -->
+  <footer>
+    <div class="container3">
+       <!-- // importing link  -->
+       <div class="containerf" id="footerContainer">
+          
+          <!-- <h1>Footer</h1> -->
+          <!-- // importing link  -->
+          <div class="containerf" id="footerContainer"></div>
+
+          <script>
+          // Fetch the content of footer.html
+          fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+              // Inject the fetched content into the container div
+              document.getElementById('footerContainer').innerHTML = data;
+              })
+              .catch(error => console.error(error));
+          </script>
+       </div>
+
+      </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="shortcut icon" href="./images/logos/kings.png" type="image/x-icon">
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <header>
+        <!-- Navigation Menu -->
+        <div class="hero">
+            <nav>
+              <div class="company-head">
+                <!-- logo -->
+                <div class="company-logo"><img src="./images/logos/kings.png" alt=""></div>
+                <!-- company name company head -->
+                <h1>CROWN-WATCHES LTD</h1>
+              </div>
+              <div class="navbar-toggle" onclick="toggleMenu()">
+                <img src="./images/logos/menu.png" alt="menu-Logo">
+              </div>
+              <!-- navigations -->
+              <ul class="navbar-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about-us.html">ABOUT-US</a></li>
+                <li><a href="collection.html">COLLECTIONS</a></li>
+                <li><a href="reviews.html">REVIEWS</a></li>
+                <li><a href="contact-us.html" class="active">CONTACTS</a></li>
+              </ul>
+              <!-- navigation end -->
+            </nav>
+          </div>
+          
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you. Get in touch with us using the following contact information:</p>
+
+            <div class="info-row">
+                <div class="icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="info">
+                    <h3>Phone</h3>
+                    <p>+254 115256304</p>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info">
+                    <h3>Email</h3>
+                    <p>info@Wachiracrownwatches.com</p>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info">
+                    <h3>Address</h3>
+                    <p>123 Main Street, Kutus, Kenya</p>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="info">
+                    <h3>WORKING HOURS</h3>
+                    <p>Monday - Friday: 8:30 AM - 5:00 PM</p>
+                    <p>Saturday: 10:00 AM - 3:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+
+            <div class="social-media">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a ><i class="fab fa-facebook-f" onclick="redirectToFacebook()"></i></a></li>
+                    <li><a ><i class="fab fa-twitter" onclick="redirectToTwitter()"></i></a></li>
+                    <li><a ><i class="fab fa-instagram"onclick="redirectToInstagram()"></i></a></li>
+                    <li><a ><i class="fab fa-linkedin-in"onclick="redirectToLinkedin()"></i></a></li>
+                    <li><a ><i class="fab fa-pinterest"onclick="redirectToInstagram()"></i></a></li>
+                    <li><a ><i class="fab fa-tiktok"onclick="redirectToInstagram()"></i></a></li>
+                    <li><a ><i class="fab fa-quora"onclick="redirectToInstagram()"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send us a Message</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+      <div class="container3">
+         <!-- // importing link  -->
+         <div class="containerf" id="footerContainer">
+            
+            <!-- <h1>Footer</h1> -->
+            <!-- // importing link  -->
+            <div class="containerf" id="footerContainer"></div>
+
+            <script>
+            // Fetch the content of footer.html
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                // Inject the fetched content into the container div
+                document.getElementById('footerContainer').innerHTML = data;
+                })
+                .catch(error => console.error(error));
+            </script>
+         </div>
+
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <style>
+        /* Reset Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Body Styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+        scroll-behavior: smooth;
+    }
+
+    /* Header Styles */
+    header {
+        background-color: #000000;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        /* border-bottom: 1px solid white; */
+    }
+    .hero {
+        background-color: rgb(0, 0, 0);
+        padding: 20px;
+        text-align: center;
+        position: fixed;
+        height: 10%;
+        top: 0;
+        left: 0;
+        width: 100%;
+    
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .company-head {
+        display: flex;
+        align-items: center;
+        color: rgb(255, 0, 0);
+        font-size: 170%;
+    }
+
+    .company-head h1 {
+        margin-left: 10px;
+    }
+
+    .company-head img {
+        height: 60px;
+        width: 90px;
+    }
+
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        padding-right: 5%;
+    }
+
+    li {
+        margin: 0 10px;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    a.active,
+    a:hover{
+        color: rgb(255, 0, 0);
+        font-size: 104%;
+    }
+
+
+
+/* responsive css  */
+/* Responsive styles for phones and tablets */
+.navbar-toggle {
+  display: none;
+}
+.navbar-toggle img{
+  width: 20px;
+  height: 2%;
+}
+@media screen and (max-width:1056px) {
+  .contact-form {
+            flex-basis: 80%;
+            padding: 5px;
+            color: #efe3e3;
+            cursor: pointer;
+            border-bottom: 1px solid rgb(255, 0, 0);
+            background-color: rgba(0, 0, 0, 0.935); 
+            border: 1px solid rgb(134, 134, 133);
+            border-radius: 5px;
+        }
+  
+}
+@media screen and (max-width: 915px) {
+  .company-head h1 {
+    margin-left: 5px;
+    font-size: 27px;
+}
+
+.company-head img {
+    height: 40px;
+    width: 70px;
+}
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.935);
+  }
+
+  .navbar-links {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .navbar-links li {
+    margin: 10px;
+  }
+
+  .navbar-links li a {
+    font-size: 10px;
+  }
+
+  .navbar-toggle {
+    /* display: block; */
+    display: none;
+  }
+  .contact-form {
+    background-color: rgba(0, 0, 0, 0.935); 
+    border: 1px solid rgb(134, 134, 133);
+    border-radius: 5px;
+     padding: 2px;
+     /* width: 100%; */
+     flex-basis: 70%;
+      }
+
+      h2 {
+        font-size: 28px; /* Slightly larger heading size */
+        color: #007bff; /* Blue heading color */
+      }
+
+      input,
+      textarea {
+        padding: 12px; /* Medium padding for inputs and textarea */
+      }
+
+      button {
+        padding: 14px; /* Medium padding for the button */
+        background-color: #007bff; /* Blue button color */
+      }
+}
+@media screen and (max-width: 550px) {
+  .company-head h1 {
+    margin-left: 5px;
+    font-size: 22px;
+}
+
+.company-head img {
+    height: 30px;
+    width: 50px;
+}
+  .navbar-toggle {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #ff0000; */
+    padding: 3px;
+    background-color: rgba(0, 0, 0, 0.935);
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+
+  }
+
+  .navbar-links li {
+    text-align: center;
+    margin: 3px;
+  }
+
+  .navbar-links li a {
+    font-size: 10px;
+    padding: .4rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    margin-top: -1px;
+    background-color: rgba(0, 0, 0, 0.935);
+    /* border: 2px solid rgba(255, 0, 0, 0.22); */
+  }
+
+  /* .contact-form {
+        background-color: rgba(0, 0, 0, 0.935); 
+        border: 1px solid rgb(134, 134, 133);
+        border-radius: 5px;
+        padding: 1px;
+        width: 100%;
+      } */
+      /* .contact-info, */
+        .contact-form {
+            flex-basis: 80%;
+            padding: 5px;
+            color: #efe3e3;
+            cursor: pointer;
+            border-bottom: 1px solid rgb(255, 0, 0);
+            background-color: rgba(0, 0, 0, 0.935); 
+            border: 1px solid rgb(134, 134, 133);
+            border-radius: 5px;
+        }
+
+      h2 {
+        font-size: 20px; 
+        color: #ff0000; 
+      }
+
+      input,
+      textarea {
+        padding: 8px; 
+      }
+
+      button {
+        padding: 10px; 
+        background-color: #ff6666; 
+      }
+
+}
+/* Hide the toggle menu when not active */
+.navbar-links.active {
+  display: flex;
+}
+
+        .container {
+          max-width: 960px;
+          margin: 0 auto;
+          padding: 40px;
+        }
+    
+        h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+          text-align: center;
+          color: #ff0000;
+          text-transform: uppercase;
+        }
+        
+    .company-overview,
+    .brand-story,
+    .quality-craftsmanship,
+    .design-philosophy,
+    .commitment-excellence,
+    .team-expertise,
+    .sustainability-ethics,
+    .testimonials-reviews,
+    .contact-info {
+      margin-bottom: 40px;
+      
+    
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #ff0000;
+    }
+
+        .section-heading {
+          font-size: 24px;
+          margin-bottom: 20px;
+          text-align: center;
+          color: #ff0000;
+          text-transform: uppercase;
+        }
+    
+        p {
+          font-size: 18px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+        }
+    
+        .quote {
+          font-style: italic;
+          font-size: 20px;
+          margin-bottom: 20px;
+          color: #666;
+        }
+    
+        .contact-info {
+          margin-top: 40px;
+          text-align: center;
+        }
+    
+        .contact-info p {
+          margin-bottom: 10px;
+        }
+    
+        .contact-info a {
+          color: #333;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+    
+        .contact-info a:hover {
+          color: #666;
+        }
+
+        /* Contact Section Styles */
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+/* 
+        .contact-info,
+        .contact-form {
+            flex-basis: 50%;
+            padding: 10px;
+            color: #efe3e3;
+            cursor: pointer;
+            border-bottom: 1px solid rgb(255, 0, 0);
+        } */
+
+        .contact-info h2,
+        .contact-form h2 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ff0000;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .info{
+            /* display: flex; */
+            align-items: flex-start;
+        }
+        .info h3{
+            display: flex;
+            margin-left: 5px;
+            /* align-items: flex-start; */
+        }
+        .info p{
+            color: #e0cccc;
+            font-size: 15px;
+        }
+        .info-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .info-row .icon {
+            margin-left: 10px;
+            font-size: 24px;
+            color: #dbcece;
+        }
+
+        .social-media ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid greenyellow; */
+            /* color: #ff0000; */
+        }
+
+        .social-media ul li {
+            margin-right: 8px;
+            padding: 3px;
+            border: 1px solid white;
+            background-color: rgb(202, 35, 29);
+        }
+        .social-media ul li:hover{
+            background-color: white;
+        }
+
+        .social-media ul li a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 24px;
+        }
+
+        .social-media ul li a:hover {
+            color: #ff0000;
+        }
+
+        .contact-form form {
+            display: grid;
+            grid-gap: 20px;
+            /* border-bottom: 1px solid rgb(255, 0, 0); */
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cf1c1c;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #da2e2e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #ff0000;
+        }
+    </style>
+</body>
+</html>

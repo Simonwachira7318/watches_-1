@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Crown Watches</title>
+  <link rel="shortcut icon" href="./images/logos/kings.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <script src="./app.js"></script>
+</head>
+<body>
+    <div class="hero">
+      <nav>
+        <div class="company-head">
+          <!-- logo -->
+          <div class="company-logo"><img src="./images/logos/kings.png" alt=""></div>
+          <!-- company name company head -->
+          <h1>CROWN-WATCHES LTD</h1>
+        </div>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+          <img src="./images/logos/menu.png" alt="menu-Logo">
+        </div>
+        <!-- navigations -->
+        <ul class="navbar-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about-us.html" class="active">ABOUT-US</a></li>
+          <li><a href="collection.html">COLLECTIONS</a></li>
+          <li><a href="reviews.html">REVIEWS</a></li>
+          <li><a href="contact-us.html">CONTACTS</a></li>
+        </ul>
+        <!-- navigation end -->
+      </nav>
+    </div>
+    <!-- <div class="empty">
+        <div class="section">
+            <img src="./images/space-img.jpg" alt="">
+        </div>
+    </div> -->
+
+    <style>
+              * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Add your custom styles here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+      scroll-behavior: smooth;
+    }
+        /* header  */
+    .hero {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    height: 10%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .company-head {
+        display: flex;
+        align-items: center;
+        color: rgb(255, 0, 0);
+        font-size: 170%;
+    }
+
+    .company-head h1 {
+        margin-left: 10px;
+    }
+
+    .company-head img {
+        height: 60px;
+        width: 90px;
+    }
+
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        padding-right: 5%;
+    }
+
+    li {
+        margin: 0 10px;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    a.active,
+    a:hover{
+        color: rgb(255, 0, 0);
+        font-size: 104%;
+    }
+
+    /* Existing styles remain unchanged */
+
+/* Responsive styles for phones and tablets */
+/* responsive css  */
+/* Responsive styles for phones and tablets */
+.navbar-toggle {
+  display: none;
+}
+.navbar-toggle img{
+  width: 20px;
+  height: 2%;
+}
+@media screen and (max-width: 915px) {
+  .company-head h1 {
+    margin-left: 5px;
+    font-size: 27px;
+}
+
+.company-head img {
+    height: 40px;
+    width: 70px;
+}
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.935);
+  }
+
+  .navbar-links {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .navbar-links li {
+    margin: 10px;
+  }
+
+  .navbar-links li a {
+    font-size: 10px;
+  }
+
+  .navbar-toggle {
+    /* display: block; */
+    display: none;
+  }
+
+}
+@media screen and (max-width: 550px) {
+  .company-head h1 {
+    margin-left: 5px;
+    font-size: 22px;
+}
+
+.company-head img {
+    height: 30px;
+    width: 50px;
+}
+  .navbar-toggle {
+    display: flex;
+    border: 1px solid #ff0000;
+    padding: 3px;
+    background-color: rgba(0, 0, 0, 0.935);
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    margin: 3px;
+  }
+
+  .navbar-links li a {
+    font-size: 10px;
+    padding: .4rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    margin-top: -1px;
+    background-color: rgba(0, 0, 0, 0.935);
+  }
+}
+/* Hide the toggle menu when not active */
+.navbar-links.active {
+  display: flex;
+}
+
+
+    .empty{
+        height: 2%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: cover;
+    }
+    .empty img{
+        height: 200px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: cover; 
+    }
+        .container {
+          max-width: 960px;
+          margin: 0 auto;
+          padding: 40px;
+        }
+    
+        h2 {
+          font-size: 36px;
+          margin-bottom: 20px;
+          text-align: center;
+          color: #ff0000;
+          text-transform: uppercase;
+        }
+        
+    .company-overview,
+    .brand-story,
+    .quality-craftsmanship,
+    .design-philosophy,
+    .commitment-excellence,
+    .team-expertise,
+    .sustainability-ethics,
+    .testimonials-reviews,
+    .contact-info {
+      margin-bottom: 40px;
+      
+    
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #ff0000;
+    }
+
+        .section-heading {
+          font-size: 24px;
+          margin-bottom: 20px;
+          text-align: center;
+          color: #ff0000;
+          text-transform: uppercase;
+        }
+    
+        p {
+          font-size: 18px;
+          line-height: 1.5;
+          margin-bottom: 20px;
+        }
+    
+        .quote {
+          font-style: italic;
+          font-size: 20px;
+          margin-bottom: 20px;
+          color: #666;
+        }
+    
+        .contact-info {
+          margin-top: 40px;
+          text-align: center;
+        }
+    
+        .contact-info p {
+          margin-bottom: 10px;
+        }
+    
+        .contact-info a {
+          color: #333;
+          text-decoration: none;
+          transition: color 0.3s ease;
+        }
+    
+        .contact-info a:hover {
+          color: #666;
+        }
+    </style>
+   
+  <header>
+    <!-- Navigation bar code here -->
+  </header>
+
+  <section class="about-us">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="company-overview">
+        <h3>Our Story</h3>
+        <p>Welcome to Crown Watches, where elegance meets precision. We have been crafting exceptional timepieces for watch enthusiasts since our inception.</p>
+      </div>
+
+      <div class="brand-story">
+        <h3>The Birth of Crown Watches</h3>
+        <p>Founded with a passion for horology, Crown Watches was established to redefine luxury timepieces. Our vision was to create watches that not only exude sophistication but also embody the artistry and craftsmanship of traditional watchmaking.</p>
+      </div>
+
+      <div class="quality-craftsmanship">
+        <h3>Precision and Quality</h3>
+        <p>At Crown Watches, we believe in upholding the highest standards of quality and precision. Each timepiece is meticulously handcrafted using the finest materials, ensuring durability, accuracy, and timeless elegance.</p>
+      </div>
+
+      <div class="design-philosophy">
+        <h3>Aesthetic Excellence</h3>
+        <p>Our design philosophy revolves around blending classic elegance with modern innovation. Every watch reflects our commitment to creating timeless masterpieces that captivate the discerning eyes of watch enthusiasts.</p>
+      </div>
+
+      <div class="commitment-excellence">
+        <h3>Our Commitment</h3>
+        <p>At Crown Watches, we are committed to delivering an exceptional customer experience. We pride ourselves on our prompt and reliable customer support, ensuring your satisfaction at every step of your journey with us.</p>
+      </div>
+
+      <div class="team-expertise">
+        <h3>Our Team</h3>
+        <p>Behind Crown Watches is a team of skilled watchmakers, designers, and industry professionals. Their expertise and dedication drive our pursuit of excellence, as we strive to create timepieces that embody our vision and craftsmanship.</p>
+      </div>
+
+      <div class="sustainability-ethics">
+        <h3>Sustainability and Ethics</h3>
+        <p>As a responsible watch brand, we are committed to sustainable practices and ethical standards. From responsible sourcing of materials to minimizing our environmental footprint, we believe in making a positive impact on the world.</p>
+      </div>
+
+      <div class="testimonials-reviews">
+        <h3>What Our Customers Say</h3>
+        <blockquote>"Crown Watches exceeded my expectations with their attention to detail and impeccable craftsmanship. I am proud to wear their timepieces."</blockquote>
+        <blockquote>"The customer service provided by Crown Watches is outstanding. They truly care about their customers and ensure a seamless experience."</blockquote>
+      </div>
+
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>If you have any inquiries, partnership opportunities, or simply want to learn more about our watches, feel free to get in touch with us.</p>
+        <p>Email: info@wachiracrownwatches.com</p>
+        <p>Phone: +2541-5256-304</p>
+        <p>Visit us at: 254_Crown-Watches LTD, Kutus, Kenya</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer code  -->
+    <footer>
+      <!-- <p>&copy; 2023 Crown Watches. All rights reserved.</p>
+      <p><a href="#">Privacy Policy</a></p> -->
+  
+    <div class="container2">
+       <!-- // importing link  -->
+       <div class="containerf" id="footerContainer">
+          
+          <!-- <h1>Footer</h1> -->
+          <!-- // importing link  -->
+          <div class="containerf" id="footerContainer"></div>
+
+          <script>
+          // Fetch the content of footer.html
+          fetch('footer.html')
+              .then(response => response.text())
+              .then(data => {
+              // Inject the fetched content into the container div
+              document.getElementById('footerContainer').innerHTML = data;
+              })
+              .catch(error => console.error(error));
+          </script>
+       </div>
+
+      </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W-Watches</title>
+    <link rel="shortcut icon" href="./images/logos/kings.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="./app.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> 
+    <body>
+        <section class="home">
+            <div class="hero">
+              <nav>
+                <div class="company-head">
+                  <!-- logo -->
+                  <div class="company-logo"><img src="./images/logos/kings.png" alt=""></div>
+                  <!-- company name company head -->
+                  <h1>CROWN-WATCHES LTD</h1>
+                </div>
+                <div class="navbar-toggle" onclick="toggleMenu()">
+                  <img src="./images/logos/menu.png" alt="menu-Logo">
+                </div>
+                <!-- navigations -->
+                <ul class="navbar-links">
+                  <li><a href="index.html" class="active">HOME</a></li>
+                  <li><a href="about-us.html">ABOUT-US</a></li>
+                  <li><a href="collection.html">COLLECTIONS</a></li>
+                  <li><a href="reviews.html">REVIEWS</a></li>
+                  <li><a href="contact-us.html">CONTACTS</a></li>
+                </ul>
+                <!-- navigation end -->
+              </nav>
+              
+            </div>
+            <div class="homepage">
+                <div class="home-body">
+                    <div class="socials">
+                        <!-- <h3>SOCIALS</h3>-->
+                        <span></span>
+                        <div class="icon-"><i class="fab fa-facebook-f" onclick="redirectToFacebook()"></i></div>
+                        <div class="icon-"><i class="fab fa-twitter" onclick="redirectToTwitter()"></i></div>
+                        <div class="icon-"><i class="fab fa-linkedin-in" onclick="redirectToLinkedin()"></i></div>
+                        <div class="icon-"><i class="fab fa-instagram" onclick="redirectToInstagram()"></i></div>
+                        <div class="icon-"><i class="fab fa-tiktok" onclick="redirectToInstagram()"></i></div>
+                        <div class="icon-"><i class="fab fa-pinterest" onclick="redirectToInstagram()"></i></div>
+                        <div class="icon-"><i class="fab fa-quora" onclick="redirectToInstagram()"></i></div>
+                    </div>
+                    <div class="detel">
+                        <!-- heading -->
+                        <h2> WE ARE THE <span>CROWN-WATCHES LTD</span></h2>
+                        <!-- page paragraph -->
+                        <p>"Aspiring to be a global leader in luxury watches, we set new standards of excellence and innovation. 
+                            Our exceptional timepieces combine timeless elegance with modern craftsmanship. With meticulous curation, we offer a diverse collection embodying 
+                            sophistication and precision. Customer satisfaction is our priority, delivering impeccable functionality and enduring beauty. Experience elegance, 
+                            sophistication, and timeless allure with our exceptional timepieces."
+                        </p>
+                        <!-- view collection button  -->
+                        <button class="view-collection" onclick="window.location.href = 'collection.html';"><b>View Collection...</b></button>         
+                    </div>
+                </div>
+            </div>
+                
+            <div class="marquee-container">
+                <div class="marquee">
+                  <div class="logo-wrapper">
+                    <img src="./images/logos/apple1.png" alt="Logo 1">
+                  </div>
+                  <div class="logo-wrapper">
+                    <img src="./images/logos/coke.png" alt="Logo 2">
+                  </div>
+                  <div class="logo-wrapper">
+                    <img src="./images/logos/tesla.png" alt="Logo 3">
+                  </div>
+                  <div class="logo-wrapper">
+                    <img src="./images/logos/manu.png" alt="Logo 4">
+                  </div>
+                  <div class="logo-wrapper">
+                    <img src="./images/logos/pepsi.png" alt="Logo 5">
+                  </div>
+                  <div class="logo-wrapper">
+                    <img src="./images/logos/audi.png" alt="Logo 6">
+                  </div>
+                </div>
+              </div>
+              <script>
+                const marqueeContainer = document.querySelector('.marquee');
+                const logoWrappers = Array.from(document.querySelectorAll('.logo-wrapper'));
+
+                // Show initial logos
+                logoWrappers.slice(0, 5).forEach((wrapper) => {
+                wrapper.classList.add('active');
+                });
+
+                // Handle logo visibility
+                setInterval(() => {
+                const hiddenLogo = marqueeContainer.querySelector('.logo-wrapper:not(.active)');
+                const nextLogo = logoWrappers[(logoWrappers.indexOf(hiddenLogo) + 6) % logoWrappers.length];
+
+                hiddenLogo.classList.remove('hidden');
+                nextLogo.classList.add('active');
+                }, 5000);
+
+              </script>
+                      
+                
+            <!-- background video import link -->
+            <video class="background-video" src="./images/video/logines-vid_001.mp4" autoplay loop muted></video>
+        </section>
+
+      <section class="footerindex">
+              <!-- importing link  -->
+        <div class="containerf" id="footerContainer"></div>
+
+        <script>
+          // Fetch the content of footer.html
+          fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+              // Inject the fetched content into the container div
+              document.getElementById('footerContainer').innerHTML = data;
+            })
+            .catch(error => console.error(error));
+        </script>
+
+      </section>
+
+   </body>
+</html>

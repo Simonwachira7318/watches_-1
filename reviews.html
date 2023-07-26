@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crown Watches - Customer Reviews</title>
+  <link rel="shortcut icon" href="./images/logos/kings.png" type="image/x-icon">
+  <script src="./app.js"></script>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <div class="hero">
+      <nav>
+        <div class="company-head">
+          <!-- logo -->
+          <div class="company-logo"><img src="./images/logos/kings.png" alt=""></div>
+          <!-- company name company head -->
+          <h1>CROWN-WATCHES LTD</h1>
+        </div>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+          <img src="./images/logos/menu.png" alt="menu-Logo">
+        </div>
+        <!-- navigations -->
+        <ul class="navbar-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about-us.html">ABOUT-US</a></li>
+          <li><a href="collection.html">COLLECTIONS</a></li>
+          <li><a href="reviews.html"  class="active">REVIEWS</a></li>
+          <li><a href="contact-us.html">CONTACTS</a></li>
+        </ul>
+        <!-- navigation end -->
+      </nav>
+    </div>
+    <div class="empty">
+        <div class="section">
+            <img src="./images/space-img.jpg" alt="">
+        </div>
+    </div>
+  <header>
+   <!-- header  -->
+  </header>
+
+  <section class="reviews">
+    <h1 class="page-title">Customer Reviews</h1>
+
+    <div class="review-grid">
+      <div class="review-class">
+        <div class="review">
+          <img src="./images/profiles/image-avatar.png" alt="Customer Photo">
+          <h3 class="customer-name">Mark symonz</h3>
+          <p class="review-text">"I absolutely love my Crown watch! The craftsmanship and attention to detail are outstanding. Highly recommended!"</p>
+          <div class="rating">
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+          </div>
+        </div>
+  
+        <div class="review">
+          <img src="./images/profiles/profile.jpg" alt="Customer Photo">
+          <h3 class="customer-name">Elon jade</h3>
+          <p class="review-text">"Crown Watches offers an excellent selection of timepieces. I purchased one for my husband and he couldn't be happier. Great quality and style!"</p>
+          <div class="rating">
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+          </div>
+        </div>
+        <div class="review">
+          <img src="./images/profiles/humphrey.jpg" alt="Customer Photo">
+          <h3 class="customer-name">Elon jade</h3>
+          <p class="review-text">"Crown Watches offers an excellent selection of timepieces. I purchased one for my husband and he couldn't be happier. Great quality and style!"</p>
+          <div class="rating">
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+          </div>
+        </div>
+        <div class="review">
+          <img src="./images/profiles/user-5.jpg" alt="Customer Photo">
+          <h3 class="customer-name">Mark symonz</h3>
+          <p class="review-text">"I absolutely love my Crown watch! The craftsmanship and attention to detail are outstanding. Highly recommended!"</p>
+          <div class="rating">
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+            <span class="rating-star">&#9733;</span>
+          </div>
+        </div>
+      </div>
+      <div class="arrow arrow-left" onclick="scrollReviews('left')">«</div>
+      <div class="arrow arrow-right" onclick="scrollReviews('right')">»</div>
+  
+    <!-- Remaining HTML content remains unchanged -->
+  
+    <script>
+      // JavaScript function to scroll the reviews
+      function scrollReviews(direction) {
+        const reviewGrid = document.querySelector('.review-grid');
+        const scrollAmount = 200;
+  
+        if (direction === 'left') {
+          reviewGrid.scrollLeft -= scrollAmount;
+        } else if (direction === 'right') {
+          reviewGrid.scrollLeft += scrollAmount;
+        }
+      }
+    </script>
+      
+      <!--  more customer reviews here -->
+    </div>
+
+    <div class="review-form">
+      <h2 class="form-title">Leave a Review</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <textarea name="review" placeholder="Your Review" required></textarea>
+        <button type="review-submit">Submit Review</button>
+      </form>
+    </div>
+
+    <div class="cta-section">
+      <h2 class="cta-title">Discover Our Collection</h2>
+      <a href="collection.html" class="cta-button">Shop Now</a>
+    </div>
+  </section>
+
+
+
+  <style>
+    /* styles.css */
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #574b4b;
+      background-color: black;
+      scroll-behavior: smooth;
+    }
+
+
+     /* header  */
+     .hero {
+    background-color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    height: 10%;
+    /* top: 0;
+    left: 0; */
+    width: 100%;
+    
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .company-head {
+        display: flex;
+        align-items: center;
+        color: rgb(255, 0, 0);
+        font-size: 170%;
+    }
+
+    .company-head h1 {
+        margin-left: 10px;
+    }
+
+    .company-head img {
+        height: 60px;
+        width: 90px;
+    }
+
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        padding-right: 5%;
+    }
+
+    li {
+        margin: 0 10px;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    a.active,
+    a:hover{
+        color: rgb(255, 0, 0);
+        font-size: 104%;
+    }
+
+    /* Existing styles remain unchanged */
+
+/* Responsive styles for phones and tablets */
+/* responsive css  */
+/* Responsive styles for phones and tablets */
+.navbar-toggle {
+  display: none;
+}
+.navbar-toggle img{
+  width: 20px;
+  height: 2%;
+}
+@media screen and (max-width: 915px) {
+  .company-head h1 {
+    margin-left: 5px;
+    font-size: 27px;
+}
+
+.company-head img {
+    height: 40px;
+    width: 70px;
+}
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.935);
+  }
+
+  .navbar-links {
+    width: 100%;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .navbar-links li {
+    margin: 10px;
+  }
+
+  .navbar-links li a {
+    font-size: 10px;
+  }
+
+  .navbar-toggle {
+    /* display: block; */
+    display: none;
+  }
+  .review{
+      display: block;
+    }
+}
+@media screen and (max-width: 550px) {
+  .company-head h1 {
+    margin-left: 5px;
+    font-size: 22px;
+}
+
+.company-head img {
+    height: 30px;
+    width: 50px;
+}
+  .navbar-toggle {
+    display: flex;
+    border: 1px solid #ff0000;
+    padding: 3px;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+    margin: 3px;
+  }
+
+  .navbar-links li a {
+    font-size: 10px;
+    padding: .4rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    margin-top: -1px;
+    background-color: rgba(0, 0, 0, 0.935);
+  }
+  .review-grid {
+      overflow-x: hidden;
+      position: relative;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+
+    .review-class {
+      display: flex;
+      width: 2000px;
+      transition: transform 0.3s ease;
+    }
+
+    .reviews {
+      position: relative;
+      width: 80%;
+    }
+
+    /* arrows for scrolling */
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: rgb(255, 0, 0);
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .arrow-left {
+      left: 10px;
+      cursor: pointer;
+      position: fixed;
+    }
+
+    .arrow-right {
+      cursor: pointer;
+      right: 10px;
+      position: fixed;
+    }
+    .arrow-left, .arrow-right:hover{
+      color: #ff0000;
+    }
+    .contact-info{
+      border: 1px solid rgb(255, 255, 255);
+    }
+    /* .review{
+      display: block;
+    } */
+
+}   
+ @media screen and (min-width: 900px) {
+      .arrow {
+        display: none;
+      }
+    }
+
+/* Hide the toggle menu when not active */
+.navbar-links.active {
+  display: flex;
+}
+
+    .empty{
+        height: 2%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: cover;
+    }
+    .empty img{
+        height: 200px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: cover; 
+    }
+
+.reviews {
+  padding: 40px;
+  flex-wrap: wrap;
+}
+.review-class{
+  display: flex;
+  /* align-items: center; */
+}
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ff0000;
+}
+
+.review-grid {
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(2, 1fr); */
+  gap: 30px;
+}
+
+.review {
+  flex-wrap: wrap;
+  background-color: #f4f4f4;
+  border: 2px solid red;
+  margin: 1%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.review:hover{
+  transform: translateY(-4px);
+}
+
+.review img {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 70%;
+  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto;
+}
+.review img:hover{
+  filter: saturate(2);
+  transform: translateY(-4px);
+}
+.customer-name {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  font-size: 16px;
+  text-align: center;
+}
+
+.review-form {
+  margin-top: 50px;
+  text-align: center;
+}
+/* rattings  */
+.rating {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .rating-star {
+        color: gold;
+        font-size: 20px;
+        margin-right: 5px;
+    }
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button[type="review-submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button[type="review-submit"]:hover{
+  color: red;
+  /* background-color: #8f8585; */
+  font-size: 13.9px;
+  transform: translateY(-3px);
+}
+
+.cta-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cta-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ff0000;
+}
+
+.cta-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+  </style>
+      <footer>
+        <!-- <p>&copy; 2023 Crown Watches. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a></p> -->
+    
+      <div class="container3">
+         <!-- // importing link  -->
+         <div class="containerf" id="footerContainer">
+            
+            <!-- <h1>Footer</h1> -->
+            <!-- // importing link  -->
+            <div class="containerf" id="footerContainer"></div>
+
+            <script>
+            // Fetch the content of footer.html
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                // Inject the fetched content into the container div
+                document.getElementById('footerContainer').innerHTML = data;
+                })
+                .catch(error => console.error(error));
+            </script>
+         </div>
+
+        </div>
+    </footer>
+  <script src="app.js"></script>
+</body>
+</html>
